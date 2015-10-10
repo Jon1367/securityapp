@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+	    
+<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Security App</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+  </ul>
+
+</nav>
+
+<div class="container">
+  <div class="row">
+
+      <table width="100%">
+        <tr>
+          <th id="value">Event Number</th>
+          <th id="motion">Alarm Length</th>
+          <th id="timestamp">TimeStamp</th>
+  
+        </tr>
+        <% for(var i=0; i < dataValue.length; i++){ %>
+        <tr>
+          <td><%=dataValue.length - i%></td>
+          <td><%=dataValue[i]['len'] / 1000%> secs</td>
+          <td><%=dataValue[i]['timestamp']%></td>
+        </tr>
+        <% } %>
+      </table>
+
+
+
+	
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/js/foundation.js"></script>
+
+
+<script>
+    $(document).foundation();
+</script>
+    </body>
+</html>
